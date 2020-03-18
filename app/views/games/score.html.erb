@@ -1,7 +1,11 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1487640228478-7a32e30a9e40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
   <div class="container text-center">
-    <h1>Well done, here are your results</h1>
-    <p><%= params[:answer] %></p>
+    <% if @include %>
+      <h1>Well done, here are your results</h1>
+      <p><%= params[:answer] %></p>
+    <% else %>
+      <h1>You lost! You got to use the letters</h1>
+    <% end %>
     <%= link_to "Try again", new_path, class:"btn btn-primary" %>
 </div>
 
