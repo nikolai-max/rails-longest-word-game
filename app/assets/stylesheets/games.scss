@@ -1,16 +1,9 @@
-// Place all the styles related to the games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  text-align: center;
-  width: 500px;
-  margin: 0 auto;
-}
-
 ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  margin: 10em 0;
+  padding: 0;
 }
 
 li {
@@ -24,16 +17,49 @@ li {
 }
 
 input[type="text"] {
-  width: 50%;
-  border-radius: 10px;
-  padding: 10px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 200;
+  border-radius: 25px 0px 0px 25px;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.08);
+  border: none;
+  width: 400px;
+  margin-right: 0;
+  white-space: none;
 }
 
 input[type="submit"] {
-  width: 20%;
-  padding: 10px;
-  border-radius: 10px;
-  font-weight: bold;
-  color: white;
+  padding: 15px 20px;
+  font-size: 20px;
+  border-radius: 0px 25px 25px 0px;
   background-color: black;
+  color: white;
+  margin-left: 0;
+  white-space: 0;
+  &:focus {
+    outline: none;
+  }
 }
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100vh;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
