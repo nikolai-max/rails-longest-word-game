@@ -56,6 +56,14 @@ input[type="submit"] {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.banner h2 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
 }
@@ -65,5 +73,26 @@ input[type="submit"] {
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  background-color: black;
+  border-radius: 25px;
+  border: solid white 1px;
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.score-container {
+  margin: 100px !important;
+}

@@ -1,15 +1,29 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1487640228478-7a32e30a9e40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1502481851512-e9e2529bfbf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
   <div class="container text-center">
     <% if !@include %>
-      <h1>God damn, <b>"<%= params[:answer] %>"</b> is not containing the right letters</h1>
+      <h2>"<%= params[:answer] %>" is not containing the letters you were given</h2>
+      <p>You spent <%= @total_time.round %> seconds</p>
+      <div class="score-container">
+        <h2>Your score:</h2>
+        <h1>0</h1>
+      </div>
     <% elsif !@english_word %>
-      <h1><b>"<%= params[:answer] %>"</b> is not a english word. Try again</h1>
+      <h2>"<%= params[:answer] %>" is not a english word. Try again</h2>
+      <p>You spent <%= @total_time.round %> seconds</p>
+      <div class="score-container">
+        <h2>Your score:</h2>
+        <h1>0</h1>
+      </div>
     <% else %>
-      <h1>Great news, <b>"<%= params[:answer] %>"</b> an actuall word</h1>
-      <p>You spent <%= @total_time %> seconds</p>
-      <h1>Your score is: <%= @score %></h1>
+      <h2>Good job! Your word: "<%= params[:answer] %>"</h2>
+      <p>You spent <%= @total_time.round %> seconds</p>
+      <div class="score-container">
+        <h2>Your score</h2>
+        <h1><%= @score %></h1>
+      </div>
     <% end %>
-    <%= link_to "Try again", new_path, class:"btn btn-primary" %>
+    <div><%= link_to "Play again", new_path, class:"button" %></div>
+  </div>
 </div>
 
 
